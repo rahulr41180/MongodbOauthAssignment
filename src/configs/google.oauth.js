@@ -26,7 +26,8 @@ passport.use(new GoogleStrategy({
             User = await User1.create({
                 email : profile._json.email,
                 password : uuidv4(),
-                role : profile._json.role
+                // role : profile._json.role
+                role : ["admin"]
             })
         }
         
